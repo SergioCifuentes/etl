@@ -2,7 +2,11 @@
 
 from django import forms
 
+from .models import Conection
 
-class DocumentForm(forms.ModelForm):
-    docfile = forms.FileField(label='Select a file', help_text='max. 42 megabytes')
+
+class DBForm(forms.ModelForm):
+    class Meta:
+        model = Conection
+        fields = '__all__'
     

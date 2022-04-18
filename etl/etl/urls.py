@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,re_path,include
 
-from etls.views import home
+from etls.views import create_db, home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home, name='home'),
+    path('create_db/', create_db, name='create_db'),
 ]
